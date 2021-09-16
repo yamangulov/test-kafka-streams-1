@@ -116,7 +116,6 @@ class QuantityAlertsAppTest {
         purchase.put("id",  new Random().nextLong());
         purchase.put("quantity", quantity);
         purchase.put("productid", productId);
-        purchase.put("total", quantity * 50D);
         return purchase;
     }
 }

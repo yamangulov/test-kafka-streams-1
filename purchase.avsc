@@ -37,18 +37,6 @@
           }
         }
       }
-    },
-    {
-      "name": "total",
-      "type": {
-        "type": "double",
-        "arg.properties": {
-          "range": {
-            "min": 50,
-            "max": 500
-          }
-        }
-      }
     }
   ]
 }

@@ -90,7 +90,6 @@ class QuantityAlertsAppTest {
         );
 
         var result = resultTopic.readKeyValue();
-        assertThat(result.key, is("1"));
 
         assertThat(result.key, is("1"));
         assertThat(
@@ -106,7 +105,6 @@ class QuantityAlertsAppTest {
         purchase.put("id",  new Random().nextLong());
         purchase.put("quantity", quantity);
         purchase.put("productid", productId);
-        purchase.put("total", quantity * 50D);
         return purchase;
     }
 }

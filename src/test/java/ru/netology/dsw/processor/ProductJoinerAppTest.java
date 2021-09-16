@@ -127,7 +127,6 @@ class ProductJoinerAppTest {
         record.put("id", 123L);
         record.put("quantity", 1L);
         record.put("productid", 1L);
-        record.put("total", 100.5D);
         return record;
     }
 }

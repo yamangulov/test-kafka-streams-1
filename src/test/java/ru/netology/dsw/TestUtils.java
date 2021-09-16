@@ -9,7 +9,6 @@ public class TestUtils {
                 .requiredLong("id")
                 .requiredLong("quantity")
                 .requiredLong("productid")
-                .requiredDouble("total")
                 .endRecord();
     }
 }
