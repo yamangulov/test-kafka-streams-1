@@ -38,6 +38,8 @@ public class ProductJoinerApp {
         // строим нашу топологию
         Topology topology = buildTopology(client, serDeProps);
 
+        // если скопировать вывод этой команды вот сюда - https://zz85.github.io/kafka-streams-viz/
+        // то можно получить красивую визуализацию топологии прямо в браузере
         System.out.println(topology.describe());
 
         KafkaStreams kafkaStreams = new KafkaStreams(topology, getStreamsConfig());
@@ -104,7 +106,7 @@ public class ProductJoinerApp {
                 .filter((key, val) -> val.success)
                 // используем именно метод mapValues, потому что он не может вызвать репартиционирования (см 2-ю лекцию)
                 .mapValues(val -> val.result)
-                // записываем успешыне сообщение в результирующий топик
+                // записываем успешные сообщения в результирующий топик
                 .to(RESULT_TOPIC, Produced.with(new Serdes.StringSerde(), avroSerde));
 
         purchaseWithJoinedProduct

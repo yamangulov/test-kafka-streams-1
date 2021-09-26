@@ -81,6 +81,7 @@ public class PurchaseQuantityAlertTrasformer implements Processor<String, Generi
                             // чтобы исключить повторную обработку
                             stateStore.delete(keyVal.key);
                         });
+        lastProcessedWindowEnd = nearestMinutesTs;
     }
 
     private String extractProductIdFromKey(byte[] key) {

@@ -39,6 +39,8 @@ public class QuantityAlertsApp {
         // строим нашу топологию
         Topology topology = buildTopology(client, serDeProps);
 
+        // если скопировать вывод этой команды вот сюда - https://zz85.github.io/kafka-streams-viz/
+        // то можно получить красивую визуализацию топологии прямо в браузере
         System.out.println(topology.describe());
 
         KafkaStreams kafkaStreams = new KafkaStreams(topology, getStreamsConfig());
