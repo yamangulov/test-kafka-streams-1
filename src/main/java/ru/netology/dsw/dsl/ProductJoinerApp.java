@@ -132,7 +132,7 @@ public class ProductJoinerApp {
                     .endRecord();
             GenericRecord result = new GenericData.Record(schema);
             // копируем в наше сообщение нужные поля из сообщения о покупке
-            result.put("purchase_id", purchase.get("id"));
+            result.put("purchase_id", purchase.get("id").toString());
             result.put("purchase_quantity", purchase.get("quantity"));
             result.put("product_id", purchase.get("productid"));
             // копируем в наше сообщение нужные поля из сообщения о товаре

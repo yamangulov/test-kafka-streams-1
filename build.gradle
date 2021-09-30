@@ -25,6 +25,8 @@ dependencies {
     implementation 'io.confluent:kafka-streams-avro-serde:6.2.0'
     // библиотеки для логирования
     implementation("org.slf4j:slf4j-log4j12:1.7.32")
+    // библиотека http сервера для практики по interactive queries
+    implementation("org.glassfish.jaxb:jaxb-runtime:3.0.2")
 
 
     // библиотека для написания unit тестов для кафка стримс
